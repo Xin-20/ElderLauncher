@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ss.android.ugc.aweme">
+    <application android:label="抖音(测试替身)" android:theme="@android:style/Theme.Material">
+        <activity android:name=".SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DeepActivity" />
+    </application>
+</manifest>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.elder.launcher.PullDownLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEFE7DA">
+
+    <!-- 下拉时露出的提示条 -->
+    <TextView
+        android:id="@+id/pull_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:textColor="#FF6A5A48"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:text="↓ 继续往下拉，进入子女设置" />
+
+<LinearLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <!-- 正常模式提示条（老人模式下隐藏） -->
+    <TextView
+        android:id="@+id/normal_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF1DAA4A"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="当前是正常手机模式（熄屏不会回到本页）\n点这里切回老人模式" />
+
+    <!-- ===== 顶部标题区 ===== -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_header">
+
+        <!-- 下拉把手：子女按住标题区域往下拉进入设置 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="34dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_handle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFB0A898"
+                android:textSize="9dp"
+                android:text="子女设置请下拉" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="78dp"
+            android:layout_gravity="start|bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_header_scene" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:rotation="-7"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:textColor="#FF6E7F52"
+            android:textSize="11dp"
+            android:text="简单一点\n生活更美好" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.06"
+                android:textColor="@color/text_main"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:text="常用联系" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_sub"
+                android:textSize="12.5dp"
+                android:text="让关心的人 · 一键联系" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="8dp"
+            android:rotation="-6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_note"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:paddingStart="8dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FF8A5A3C"
+                android:textSize="12dp"
+                android:text="家人在身边\n心里就踏实" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|top"
+                android:elevation="3dp"
+                android:src="@drawable/ic_heart" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- ===== 打电话区 ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_sec_call"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_phone_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:maxLines="1"
+                android:textColor="@color/text_main"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:text="点照片直接打电话" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/text_sub"
+                android:textSize="11.5dp"
+                android:text="一键通话 · 方便快捷" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/card0"
+                layout="@layout/card_contact"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/card1"
+                layout="@layout/card_contact"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== 微信视频区 ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.06"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_sec_video"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:id="@+id/wechat_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_chat_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:maxLines="1"
+                android:textColor="@color/text_main"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:text="点照片直接视频" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/text_sub"
+                android:textSize="11.5dp"
+                android:text="微信视频 · 看见更亲近" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/card2"
+                layout="@layout/card_contact"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/card3"
+                layout="@layout/card_contact"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ===== 打开抖音 ===== -->
+    <LinearLayout
+        android:id="@+id/douyin"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_douyin"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="22dp"
+        android:paddingEnd="14dp">
+
+        <ImageView
+            android:id="@+id/douyin_icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:src="@drawable/ic_music" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.08"
+                android:maxLines="1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="34dp"
+                android:textStyle="bold"
+                android:text="打开抖音" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:textColor="#FFD0D0D0"
+                android:textSize="12dp"
+                android:text="看看有趣的视频  丰富每一天" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_chevron" />
+    </LinearLayout>
+</LinearLayout>
+</com.elder.launcher.PullDownLayout>

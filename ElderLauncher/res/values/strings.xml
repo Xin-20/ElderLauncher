@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">常用联系</string>
+    <string name="setup_title">常用联系·子女配置</string>
+    <string name="service_label">常用联系·熄屏复位与微信视频助手</string>
+    <string name="service_desc">开启后：1）每次熄屏自动回到“常用联系”主页并关闭抖音；2）点老人主页上的照片可自动打开微信并发起视频通话。本服务只操作微信界面中的搜索、聊天和视频按钮，不读取、不上传任何聊天内容。</string>
+</resources>

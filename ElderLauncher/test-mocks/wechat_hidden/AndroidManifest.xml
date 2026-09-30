@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tencent.mm">
+    <application android:label="微信(测试替身)" android:theme="@android:style/Theme.Material.Light">
+        <activity android:name=".LauncherUI" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:exported="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchUI" />
+        <activity android:name=".ChattingUI" android:exported="true" />
+        <activity android:name=".VoipUI" android:exported="true" />
+    </application>
+</manifest>

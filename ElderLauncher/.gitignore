@@ -1,0 +1,9 @@
+build/
+keystore/
+*.jks
+*.keystore
+*.apk
+test-mocks/*/build/
+local.properties
+.idea/
+*.iml
